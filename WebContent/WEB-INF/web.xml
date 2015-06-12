@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+							http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>Head First Servlet and JSP</display-name>
+	<welcome-file-list>
+		<welcome-file>welcome.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<servlet-class>com.example.web.BeerSelect</servlet-class>
+		<init-param>
+			<param-name>adminEmail</param-name>
+			<param-value>1234567788@qq.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>Code Download</servlet-name>
+		<servlet-class>com.example.web.CodeDownload</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test Listener</servlet-name>
+		<servlet-class>com.example.web.TestListener</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test Context Lock</servlet-name>
+		<servlet-class>com.example.web.ContextLock</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test Session Lock</servlet-name>
+		<servlet-class>com.example.web.SessionLock</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test URL Rewriting</servlet-name>
+		<servlet-class>com.example.web.URLRewrite</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test Cookie</servlet-name>
+		<servlet-class>com.example.web.CookieTest</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Check Cookie</servlet-name>
+		<servlet-class>com.example.web.CookieCheck</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>My Test Init</servlet-name>
+		<jsp-file>/TestInit.jsp</jsp-file>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>vonzhou@example.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>Test EL</servlet-name>
+		<servlet-class>com.example.web.ELTest</servlet-class>
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<url-pattern>/SelectBeer.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Code Download</servlet-name>
+		<url-pattern>/CodeDownload.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test Listener</servlet-name>
+		<url-pattern>/TestListener.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test Context Lock</servlet-name>
+		<url-pattern>/ContextLock.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test Session Lock</servlet-name>
+		<url-pattern>/SessionLock.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test URL Rewriting</servlet-name>
+		<url-pattern>/URLRewrite.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test Cookie</servlet-name>
+		<url-pattern>/TestCookie.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Check Cookie</servlet-name>
+		<url-pattern>/CheckCookie.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test EL</servlet-name>
+		<url-pattern>/ELTest.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 配置Web全局的参数，可能是一个数据库连接串，这里仅仅用一个string来创建一个对象，然后设置到全局属性中 -->
+	<context-param>
+		<param-name>breed</param-name>
+		<param-value>Great Dane</param-value>
+	</context-param>
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>944671035@qq.com</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.example.web.MyServletContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.example.web.BeerSessionCounter</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.example.web.BeerAttributeListener</listener-class>
+	</listener>
+
+
+</web-app>

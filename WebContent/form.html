@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 align="center">Beer Selection Page</h1>
+	<form method="POST" action="SelectBeer.do">
+		Select Beer Characteristics
+		<P>
+			<select name="color" size="1">
+				<option>light
+				<option>dark
+				<option>brown
+				<option>red
+			</select> <br>
+			<br>
+		<center>
+			<input type="SUBMIT" />
+		</center>
+	</form>
+
+	<!-- 测试文件下载 -->
+	<h1 align="center">You can download our code!</h1>
+	<br>
+	<a href="CodeDownload.do">download code jar</a>
+
+	<!-- 测试监听器 -->
+	<h1 align="center">3.This Link Test ServletConextListener</h1>
+	<br>
+	<a href="TestListener.do">Test ServletConextListener</a>
+	<br>
+	<br>
+	<!-- -->
+	<h1 align="center">4.This Link Test Context Attribute
+		Synchronization</h1>
+	<br>
+	<a href="ContextLock.do">Test Lock on context </a>
+	<!-- -->
+	<h1 align="center">5.This Link Test Protect Session Attribute by
+		synchronize HttpSession</h1>
+	<br>
+	<a href="SessionLock.do">Test Lock on HttpSession</a>
+	<!-- -->
+	<h1 align="center">6.This Link Test URL Rewriting</h1>
+	<br>
+	<a href="URLRewrite.do">Test URL Rewriting</a>
+	<!-- -->
+	<h1 align="center">7.This Link Test Add Cookie</h1>
+	<br>
+	<form method="POST" action="TestCookie.do">
+		We need your name<p>
+			<input type="text" name="username" /><input type="SUBMIT" />
+	</form>
+	
+	<!-- -->
+	<h1 align="center">5.This Link Test #page visited</h1>
+	<br>
+	<a href="pageCounter.jsp">Test page visiting counter</a>
+	<!-- 测试无脚本JSP  使用JavaBean-->
+	<h1 align="center">6.JSP action with java bean!</h1>
+	<br>
+	<a href="person.html">To fill in your profile</a>
+	<!-- EL表达式  -->
+	<h1 align="center">7.JSP  EL </h1>
+	<br>
+	<a href="ELTest.do">Try It!</a>
+	<!-- EL 隐式对象 -->
+	<h1 align="center">7.JSP  EL implicit object</h1>
+	<br>
+	<a href="person2.html">Try It!</a>
+</body>
+</html>
